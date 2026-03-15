@@ -1,6 +1,19 @@
 # 🌄 Intel Image Classification using CNN (Deep Learning)
 
+![Python](https://img.shields.io/badge/Python-3.9-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-DeepLearning-orange)
+![CNN](https://img.shields.io/badge/Model-CNN-green)
+![Platform](https://img.shields.io/badge/Platform-Google%20Colab-yellow)
+
 A deep learning project focused on building and evaluating a **Convolutional Neural Network (CNN)** for **multi-class image classification** using the **Intel Image Classification dataset**.
+
+---
+
+## 🚀 Run Notebook in Google Colab
+
+Click the button below to open the notebook directly in Google Colab.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Laya123-star/intel-image-classification-cnn/blob/main/DL_Assignment_1_CNN.ipynb)
 
 ---
 
@@ -10,13 +23,13 @@ This project implements a **Convolutional Neural Network (CNN)** to classify nat
 
 The project covers the complete deep learning pipeline including:
 
-- Dataset exploration
-- Image preprocessing
-- Data augmentation
-- CNN architecture design
-- Model training and validation
-- Model evaluation using performance metrics
-- Prediction visualization
+- Dataset exploration  
+- Image preprocessing  
+- Data augmentation  
+- CNN architecture design  
+- Model training and validation  
+- Model evaluation using performance metrics  
+- Prediction visualization  
 
 The goal is to build a **robust CNN model capable of accurately classifying real-world natural scenes**.
 
@@ -62,8 +75,6 @@ The dataset contains **6 scene categories**:
 - 🌊 Sea  
 - 🛣 Street  
 
-Each image belongs to **one of the above categories**.
-
 ---
 
 # 🧹 Data Preprocessing
@@ -79,23 +90,19 @@ Pixel values were scaled to the range **0–1** by dividing by 255.
 ### ✔ Train / Validation / Test Split
 The dataset was split into:
 
-- **Training Set**
-- **Validation Set**
-- **Test Set**
-
-This ensures the model is evaluated on **unseen data**.
+- Training Set  
+- Validation Set  
+- Test Set  
 
 ### ✔ Data Augmentation
 
 To improve model generalization and prevent overfitting, the following augmentation techniques were used:
 
-- Image Rotation
-- Horizontal Flip
-- Zoom
-- Width & Height Shift
-- Shear Transform
-
-Data augmentation increases dataset diversity without collecting new data.
+- Image Rotation  
+- Horizontal Flip  
+- Zoom  
+- Width & Height Shift  
+- Shear Transform  
 
 ---
 
@@ -105,9 +112,7 @@ A **Convolutional Neural Network (CNN)** was built from scratch using **TensorFl
 
 ### Architecture Components
 
-The CNN model includes:
-
-✔ Convolutional Layers (Feature Extraction)  
+✔ Convolutional Layers  
 ✔ ReLU Activation Function  
 ✔ Max Pooling Layers  
 ✔ Dropout Layers for Regularization  
@@ -122,19 +127,15 @@ The CNN model was trained using the **training dataset** and validated using the
 
 ### Training Techniques Used
 
-- **Early Stopping** to prevent overfitting
-- **Model Checkpointing** to save the best model
-- **Batch Training**
-- **Validation Monitoring**
-
-### Training Visualization
+- Early Stopping  
+- Model Checkpointing  
+- Batch Training  
+- Validation Monitoring  
 
 Training progress was monitored using:
 
-- **Training Accuracy vs Validation Accuracy**
-- **Training Loss vs Validation Loss**
-
-These graphs help identify **overfitting or underfitting**.
+- Training Accuracy vs Validation Accuracy  
+- Training Loss vs Validation Loss  
 
 ---
 
@@ -144,13 +145,11 @@ After training, the model was evaluated using the **test dataset**.
 
 ### Evaluation Metrics
 
-The following metrics were used to measure model performance:
-
-- **Accuracy**
-- **Precision**
-- **Recall**
-- **F1-Score**
-- **Confusion Matrix**
+- Accuracy  
+- Precision  
+- Recall  
+- F1 Score  
+- Confusion Matrix  
 
 ---
 
@@ -160,10 +159,8 @@ To better understand the model’s performance:
 
 - **10 random test images** were selected
 - Each image was displayed with:
-  - **Actual Label**
-  - **Predicted Label**
-
-This helps visually verify the correctness of model predictions.
+  - Actual Label
+  - Predicted Label
 
 ---
 
@@ -185,10 +182,12 @@ This helps visually verify the correctness of model predictions.
 # 📁 Repository Structure
 
 ```
-Intel-Image-Classification-CNN/
+intel-image-classification-cnn/
 
-├── CNN_Image_Classification.ipynb
+│
+├── DL_Assignment_1_CNN.ipynb
 ├── README.md
+└── DL Assignment 1 - CNN.pdf
 ```
 
 ---
@@ -197,7 +196,7 @@ Intel-Image-Classification-CNN/
 
 ### 1️⃣ Open the Notebook
 
-Open the notebook in **Google Colab**.
+Click the **Google Colab button above**.
 
 ---
 
@@ -209,11 +208,9 @@ pip install tensorflow matplotlib numpy seaborn kaggle
 
 ---
 
-### 3️⃣ Kaggle API Setup (Dataset Download)
+### 3️⃣ Kaggle API Setup
 
-Upload your **Kaggle API token (`kaggle.json`)** to Google Colab.
-
-Then run:
+Upload your **kaggle.json** file and run:
 
 ```python
 !mkdir -p ~/.kaggle
@@ -221,13 +218,13 @@ Then run:
 !chmod 600 ~/.kaggle/kaggle.json
 ```
 
-Download the dataset:
+Download dataset:
 
 ```python
 !kaggle datasets download -d puneet6060/intel-image-classification
 ```
 
-Unzip the dataset:
+Unzip dataset:
 
 ```python
 !unzip intel-image-classification.zip

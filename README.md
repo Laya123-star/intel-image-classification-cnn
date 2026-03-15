@@ -114,24 +114,6 @@ The CNN model includes:
 ✔ Fully Connected (Dense) Layers  
 ✔ Softmax Output Layer for Multi-Class Classification  
 
-### Model Flow
-
-Input Image  
-⬇  
-Convolution Layer  
-⬇  
-ReLU Activation  
-⬇  
-Max Pooling  
-⬇  
-Convolution Layer  
-⬇  
-Pooling  
-⬇  
-Fully Connected Layers  
-⬇  
-Softmax Output Layer  
-
 ---
 
 # ⚙ Model Training
@@ -170,8 +152,6 @@ The following metrics were used to measure model performance:
 - **F1-Score**
 - **Confusion Matrix**
 
-These metrics provide detailed insight into classification performance for each class.
-
 ---
 
 # 🔍 Prediction Visualization
@@ -197,15 +177,16 @@ This helps visually verify the correctness of model predictions.
 | Matplotlib | Visualization |
 | Seaborn | Confusion matrix visualization |
 | OpenCV / PIL | Image processing |
-| Google Colab / Jupyter Notebook | Development environment |
+| Kaggle API | Dataset download |
+| Google Colab | Development environment |
 
 ---
 
 # 📁 Repository Structure
 
+```
 Intel-Image-Classification-CNN/
 
-```
 ├── CNN_Image_Classification.ipynb
 ├── README.md
 ```
@@ -214,23 +195,54 @@ Intel-Image-Classification-CNN/
 
 # 🚀 How to Run the Project
 
-1️⃣ Open the notebook in **Google Colab or Jupyter Notebook**
+### 1️⃣ Open the Notebook
 
-2️⃣ Install required libraries if needed:
+Open the notebook in **Google Colab**.
+
+---
+
+### 2️⃣ Install Required Libraries
 
 ```python
-pip install tensorflow matplotlib numpy seaborn
+pip install tensorflow matplotlib numpy seaborn kaggle
 ```
 
-3️⃣ Download the dataset from Kaggle.
+---
 
-4️⃣ Update the dataset path in the notebook.
+### 3️⃣ Kaggle API Setup (Dataset Download)
 
-5️⃣ Run all cells sequentially to:
+Upload your **Kaggle API token (`kaggle.json`)** to Google Colab.
 
+Then run:
+
+```python
+!mkdir -p ~/.kaggle
+!cp kaggle.json ~/.kaggle/
+!chmod 600 ~/.kaggle/kaggle.json
+```
+
+Download the dataset:
+
+```python
+!kaggle datasets download -d puneet6060/intel-image-classification
+```
+
+Unzip the dataset:
+
+```python
+!unzip intel-image-classification.zip
+```
+
+---
+
+### 4️⃣ Run the Notebook
+
+Run all cells sequentially to:
+
+- Load dataset
 - Preprocess images
-- Train the CNN model
-- Evaluate the model
+- Train CNN model
+- Evaluate performance
 - Visualize predictions
 
 ---
@@ -240,9 +252,9 @@ pip install tensorflow matplotlib numpy seaborn
 ✔ Understanding CNN architecture  
 ✔ Image preprocessing techniques  
 ✔ Data augmentation for deep learning  
-✔ Training and tuning deep learning models  
+✔ Training deep learning models  
 ✔ Evaluating classification performance  
-✔ Visualizing model predictions  
+✔ Visualizing CNN predictions  
 
 ---
 
